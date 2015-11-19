@@ -1,0 +1,34 @@
+{
+  "name": "ElectricDiscoTech",
+  "version": "0.0.1",
+  "description": "An approach to developing modern web applications",
+  "main": "Gruntfile.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-less": "^1.1.0",
+    "grunt-contrib-uglify": "^0.10.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-ts": "^5.1.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codemarc/ElectricDiscoTech.git"
+  },
+  "author": {
+    "name": "Marc J. Greenberg",
+    "email": "codemarc@gmail.com",
+    "url": "http://codemarc.net/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codemarc/ElectricDiscoTech/issues"
+  },
+  "homepage": "https://github.com/codemarc/ElectricDiscoTech#readme"
+}

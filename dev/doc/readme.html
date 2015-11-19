@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Codemarc&apos;s DiscoTech">
+    <meta name="author" content="Marc J. Greenberg">
+    <title>Codemarc&apos;s ElectricDiscoTech</title>
+    
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/style.min.css" type="text/css">
+</head>
+
+<body>
+    <div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
+        <div class="uk-grid">
+            <div class="uk-width-1-1 uk-margin-bottom">
+                <h1 class="uk-heading uk-margin-top">ElectricDiscoTech 
+                        <span class="uk-margin-top uk-float-right uk-text-small">
+                            <a class="uk-text-small" href="mailto:codemarc@gmail.com:">Marc J. Greenberg &lt;codemarc@gmail.com&gt;</a>
+                            <div class="uk-text-muted">November 18, 2015</div>
+                        </span>
+                </h1>
+                <div class="edt-subhead">An approach to developing modern web applications</div>
+            </div>
+        </div>
+
+        <abstract>
+            Modern web applications <small>(circa 2015)</small> treat the browser as a full runtime environment. The explosion
+            of opensource, freely available frameworks, the cloud, containerization, devops and tooling enable any developer 
+            with a spark of an idea to "create", build, package and deploy functional, scalable, data driven web applications 
+            by simply investing a little bit time and energy in learning the "right" set of stuff. The trick then is to know 
+            how to quickly provision a useable development environment so that the focus remains on the content and 
+            not the technology.
+        </abstract>
+
+        <h2>Getting Started</h2>
+        <div class="uk-grid">
+            <div class="uk-width-medium-3-4">
+                <article class="uk-article">
+                <p>It all starts with an idea. This can be about technology, or it can be about making money, or helping a friend/relative
+                    with one of their ideas, or it can be about learning a skill or technique. To make something great you need a
+                    little passion for whatever it is. Then you&apos;ll need a name and a reason for choosing the name. This gives you
+                    a focal point. It should be something that is easy to remember. Something that reminds you of your original motivation.
+                </p>
+                <p>Let&apos;s examine the name I chose for this project: ElecrtricDiscoTech (<b><i>edt</i></b>). It comes from the name of a family
+                    business <nobr><a href="http://ielectricalsupplies.com/">Smith Electrical Supply</a></nobr> and a tee shirt with a logo "Smith El-Disco"
+                    as in Smith Electrical Distribution Company. The disco part has always stuck with me as has the notion of
+                    <a href="http://bit.ly/1H8BCoI">service discovery</a> and the ever exciting memory of the actual
+                    <a href="https://en.wikipedia.org/wiki/Nightclub">discotheque</a>. Its is important not to vest to deeply in
+                    mentally marketing your chosen name as it <i>always</i> morphs over time.
+                </p>
+                <p>Next I like to to create a favorite icon. This serves two purposes. It gets the creativity flowing while reforcing
+                    the motivational reminder, visually. So of course a discotech needs a discoball. Upload your image to a
+                    <a href="http://www.favicon-generator.org/">favorite icon generator</a> and you have started.
+                </p>
+                </article>
+            </div>
+            <div class="uk-width-medium-1-4">
+                <a href="http://ielectricalsupplies.com/"><img src="http://bit.ly/1H8L6Az" class="uk-margin-top"></a>
+                <img src="disco-ball2.jpg" class="uk-margin-top">        
+            </div>
+        </div>
+
+        <h3>Step onto the dance floor (Project structure)</h3>
+        <div class="uk-grid">
+            <div class="uk-width-medium-3-4">
+                <article class="uk-article">    
+                    <h4 id="github"><a href="#github" class="uk-link-reset">GitHub</a></h2>
+
+                    <p>ElectricDiscoTech is hosted on <a href="https://github.com/codemarc/ElectricDiscoTech">GitHub</a> and licensed under 
+                    <a href="http://opensource.org/licenses/MIT">MIT license</a>. You're welcome to use it for all your personal 
+                    and commercial projects. To access all source files, just clone the repository on 
+                    <a href="https://github.com/codemarc/ElectricDiscoTech">GitHub</a> or download the latest version.
+                    </p>
+
+                            <p><a class="uk-button uk-button-large uk-button-primary" href="https://github.com/uikit/uikit/archive/master.zip">Download source</a></p>
+
+                            <hr class="uk-article-divider">
+
+                            <h2 id="file-structure"><a href="#file-structure" class="uk-link-reset">File structure</a></h2>
+
+                            <p>UIkit is built on <a href="http://lesscss.org">Less</a>, a CSS preprocessor, which adds variables, mixins and much more to CSS. It compiles code written in Less into CSS. The main file structure of UIkit is as follows.</p>
+
+                            <div class="uk-overflow-container">
+                                <table class="uk-table uk-table-striped uk-text-nowrap">
+                                    <thead>
+                                        <tr>
+                                            <th>Folder</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><code>/docs</code></td>
+                                            <td>Contains the very UIkit documentation you are looking at right now.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>/src</code></td>
+                                            <td>Contains all Less and JavaScript component files.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>/tests</code></td>
+                                            <td>Contains test files of all components.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>/themes</code></td>
+                                            <td>Contains all additonal theme files organized in sub folders.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>/vendor</code></td>
+                                            <td>Contains external libraries, like jQuery and others that are used by UIkit.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <p>All compiled and minified CSS and JavaScript files, as well as Less and Sass files can be found in the separate <a href="https://github.com/uikit/bower-uikit">Bower UIkit repository</a>. Check out the documentation on <a href="documentation_less-sass.html">Less and Sass files</a> for more information.</p>
+
+                            <hr class="uk-article-divider">
+
+                            <h2 id="automate-preprocessing"><a href="#automate-preprocessing" class="uk-link-reset">Automate preprocessing</a></h2>
+
+                            <p>To automate the process of compiling Less files into CSS, we use <a href="http://gulpjs.com/">Gulp</a>, a <a href="http://nodejs.org/">Node.js</a> based task runner, that watches the source directory you are working on. Whenever you save changes in the source files, Gulp automatically compiles all files into one single CSS file.</p>
+
+                            <p>Firstly, you need to install Node and setup the <code>gulp</code> as a global install. Finally, switch to the UIkit directory and install the Node dependencies.</p>
+
+<pre><code>npm install -g gulp
+
+cd uikit
+npm install</code></pre>
+
+                            <p>Now you can run Gulp to build and modify the release. The built version of UIkit will be put in the <code>/dist</code> directory. Pass a theme name parameter to only build the specified theme.</p>
+
+<pre><code>gulp [-t themename]</code></pre>
+
+                            <p>You can also set Gulp to watch your working directory, so it will preprocess your files automatically everytime you hit save. Pass the theme parameter to watch only a specified theme to speed up the build process.</p>
+
+<pre><code>gulp watch [-t themename]</code></pre>
+
+                            <p>Load new themes and styles into the customizer.</p>
+
+<pre><code>gulp indexthemes</code></pre>
+
+                            <hr class="uk-article-divider">
+
+                            <h2 id="tests"><a href="#tests" class="uk-link-reset">Tests</a></h2>
+
+                            <p>UIkit provides test files for every component. Each of these pages contains test cases of its component and gives you an overview of all the possibilities that are supported out of the box.</p>
+
+
+                            <p>UIkit uses <a href="http://www.browsersync.io/">BrowserSync</a> to accelerate your workflow. Run <code>gulp sync</code> and you will be able to see changes on-the-fly, not only in your browser but across multiple devices, when working on your own theme or modifying existing ones. You can switch between all components and themes within the tests and even switch to RTL mode.</p>
+
+                            <p><a class="uk-button uk-button-large uk-button-primary" href="../tests/overview.html">Go to tests</a></p>
+
+                        </article>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="tm-footer">
+            <div class="uk-container uk-container-center uk-text-center">
+
+                <ul class="uk-subnav uk-subnav-line uk-flex-center">
+                    <li><a href="http://github.com/uikit/uikit">GitHub</a></li>
+                    <li><a href="http://github.com/uikit/uikit/issues">Issues</a></li>
+                    <li><a href="http://github.com/uikit/uikit/blob/master/CHANGELOG.md">Changelog</a></li>
+                    <li><a href="https://twitter.com/getuikit">Twitter</a></li>
+                </ul>
+
+                <div class="uk-panel">
+                    <p>Made by <a href="http://www.yootheme.com">YOOtheme</a> with love and caffeine.<br>Licensed under <a href="http://opensource.org/licenses/MIT">MIT license</a>.</p>
+                    <a href="../index.html"><img src="images/logo_uikit.svg" width="90" height="30" title="UIkit" alt="UIkit"></a>
+                </div>
+
+            </div>
+        </div>
+                
+                
+                
+                
+                
+                
+                
+                
+                <p>
+                By creating an intuitive file layout/orgainzation and then adoptiong it as a convention you can decrease 
+                the number decisions that need to be made. This design strategy was first encountered 
+                during the one of my <a href="https://en.wikipedia.org/wiki/Software_configuration_management">software 
+                configuration</a> stints converting from a 
+                <a href="http://subversion.apache.org/">subversion</a> hooked <a href="http://ant.apache.org/">ant</a> 
+                build to a <a href="https://jenkins-ci.org/">jenkins</a> based <a href="https://maven.apache.org/">
+                maven</a> system. When you <a href="https://github.com/codemarc/ElectricDiscoTech">check out <i>edt</i> from github</a>
+                you get a file layout as follows:                
+                </p>
+                
+                <h4>Package Management</h4>
+                <p>
+                    In the "Now" software world the use of package managers has exploded. Package managers
+                    provide a sets to tools used to automate: install, remove, upgrade and configue 
+                    so that the developer can maintain a steady state developer experience. <b><i>edt</i></b> relies heavily 
+                    on the following package managers.
+                </p>
+                 <p>During development <b><i>edt</i></b> relies on the following package managers:</p>
+                <ul>
+                    <li><a href="https://www.npmjs.com/">npm</a> - a package manager for node.js</li>
+                    <li><a href="http://bower.io/">bower</a> - a package manager for the web</li>
+                    <li><a href="http://definitelytyped.org/tsd/">tsd</a> - package manager to search and install TypeScript definition files</li>
+                    <li><a href="https://maven.apache.org/index.html">maven</a> - a package manager and build tool for Java</li>
+                </ul>
+                
+                <h3>Do the hustle</h3>
+                    
+                    
+<!--
+                    <li><a href="http://gruntjs.com/">grunt</a>
+                    https://en.wikipedia.org/wiki/Bower_(software)
+<div class="uk-panel">
+    <div class="uk-panel-badge uk-badge">...</div>
+    <h3 class="uk-panel-title">...</h3>
+    ...
+</div>                    
+                -->
+                    
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
