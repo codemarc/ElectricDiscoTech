@@ -90,86 +90,221 @@
                     <h4 id="file-structure"><a href="#file-structure" class="uk-link-reset">File structure</a></h4>
                     <p>
                         ElectricDiscoTech employs an intuitive file layout/orgainzation. By adopting it as a convention you can decrease the number
-                        of decisions that need to be made. The main file structure is as follows.
+                        of decisions that need to be made. Although it is sourced in a single tree, logically it is broken down into as:
                     </p>
-
-                    <div class="uk-overflow-container">
-                        <table class="uk-table uk-table-striped uk-text-nowrap">
-                            <thead>
-                                <tr>
-                                    <th>Folder</th>
-                                    <th>Description</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><code>/css</code></td>
-                                    <td>Contains the compiled css for this site</td>
-                                </tr>
-                                <tr>
-                                    <td><code>/dev</code></td>
-                                    <td>Contains the source components of the system</td>
-                                </tr>
-                                <tr>
-                                    <td><code>/dev/bower_components</code></td>
-                                    <td>Contains source components pulled in using bower</td>
-                                </tr>
-                                <tr>
-                                    <td><code>/dev/docs</code></td>
-                                    <td>Contains the documentation for the system including this document</td>
-                                </tr>
-                                <tr>
-                                    <td><code>/dev/js</code></td>
-                                    <td>Contains the compiled typescript output</td>
-                                </tr>
-                                <tr>
-                                    <td><code>/dev/less</code></td>
-                                    <td>Contains the less source files for this project</td>
-                                </tr>
-                                <tr>
-                                    <td><code>/dev/node_modules</code></td>
-                                    <td>Contains components used by grunt</td>
-                                </tr>
-                                <tr>
-                                    <td><code>/dev/ts</code></td>
-                                    <td>Contains source for typescript components</td>
-                                </tr>
-                                <tr>
-                                    <td><code>/dev/typings</code></td>
-                                    <td>Contains source for typescript definitions pulled in by tsd</td>
-                                </tr>
-                                <tr>
-                                    <td><code>/fonts</code></td>
-                                    <td>Contains fonts defintitions for all components.</td>
-                                </tr>
-                                <tr>
-                                    <td><code>/images</code></td>
-                                    <td>Contains all images used by the website.</td>
-                                </tr>
-                                <tr>
-                                    <td><code>/js</code></td>
-                                    <td>Contains external libraries, like jQuery and others that are used by ElectricDiscoTech.</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    
+                    <div class="uk-grid">
+                        <div class="uk-width-medium-1-2">
+                            <div class="uk-panel">
+                                <!--<div class="uk-panel-badge uk-badge"></div>-->
+                                <h3 class="uk-panel-title">Develop</h3>
+                                <div class="uk-overflow-container">
+                                    <table class="uk-table uk-table-striped uk-text-nowrap">
+                                        <thead>
+                                            <tr>
+                                                <th>Folder</th>
+                                                <th>Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><code>/dev</code></td>
+                                                <td>source components of the system</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>/dev/bower_components</code></td>
+                                                <td>source pulled in using bower</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>/dev/docs</code></td>
+                                                <td>doc for <i><b>edt</b></i> including this document</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>/dev/js</code></td>
+                                                <td>results of compiled typescript</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>/dev/less</code></td>
+                                                <td>less source files for this project</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>/dev/node_modules</code></td>
+                                                <td>runtime used by grunt</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>/dev/ts</code></td>
+                                                <td>typescript source for this project</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>/dev/typings</code></td>
+                                                <td>typescript definitions pulled in by tsd</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>                                
+                            </div>                                                        
+                        </div>
+                        <div class="uk-width-medium-1-2">   
+                            <div class="uk-panel">
+                                <!--<div class="uk-panel-badge uk-badge"></div>-->
+                                <h3 class="uk-panel-title">Deploy</h3>                                
+                                <div class="uk-overflow-container">
+                                    <table class="uk-table uk-table-striped uk-text-nowrap">
+                                        <thead>
+                                            <tr>
+                                                <th>Folder</th>
+                                                <th>Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><code>/css</code></td>
+                                                <td>compiled/minified css for this site</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>/fonts</code></td>
+                                                <td>fonts defintitions</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>/images</code></td>
+                                                <td>images used by the webapp</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>/js</code></td>
+                                                <td>compiled minified js including external libraries</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>                                                                
+                            </div>
+                        </div>
                     </div>
-
                     <hr class="uk-article-divider">
                     <h4 id="package-managers"><a href="#package-managers" class="uk-link-reset">Package Managers</a></h4>
                     <p>
-                        In the "Now" software world the use of package managers has exploded. Package managers provide a sets to tools used to automate:
-                        install, remove, upgrade and configue so that the developer can maintain a steady state developer
-                        experience. <b><i>edt</i></b> relies heavily on the following package managers.
+                        In the modern software world the use of package managers has exploded. Package managers provide a 
+                        sets to tools used to automate: install, remove, upgrade and configue so that the developer can 
+                        maintain a steady state developer experience. <b><i>edt</i></b> relies heavily on the following 
+                        package managers.
                     </p>
                     <p>During development <b><i>edt</i></b> relies on the following package managers:</p>
                     <ul>
-                        <li><a href="https://www.npmjs.com/">npm</a> - a package manager for node.js</li>
+                        <li><a href="https://www.npmjs.com/">npm</a> - a package manager for Node.js</li>
                         <li><a href="http://bower.io/">bower</a> - a package manager for the web</li>
                         <li><a href="http://definitelytyped.org/tsd/">tsd</a> - package manager to search and install TypeScript
                             definition files</li>
                         <li><a href="https://maven.apache.org/index.html">maven</a> - a package manager and build tool for Java</li>
-                    </ul>
+                    </ul>              
+                          
+                    <h5>Install/Update each package manager</h5>
+                    
+                    <!-- npm -->
+                    <h3>npm</h3>
+                    <p><a href="https://www.npmjs.com/">npm</a> is part of <a href="https://nodejs.org">Node.js</a>. To see if you have 
+                        npm installed go to a command line and run. If you get a command not found or some other error then you probably 
+                        do not have node installed. so install it, otherwise update it.                        
+                    </p>
+                    <button class="edt-clip" data-clipboard-text="npm -version;sudo npm install -g npm;npm -version"><i class="uk-icon-clipboard"></i></button>
+                    <pre>$ npm -version
+3.3.12
 
+$ sudo npm install -g npm
+&vellip;
+
+$ npm -version
+3.4.1</pre>
+                    <!-- bower -->
+                    <h3 class="uk-margin-large-top">bower</h3>
+                    <p><a href="http://bower.io/">bower</a> is billed as a package manager for the web. What it saves you from is endless hours
+                        of searching for source components. If you know the name of a component and its author has created a package for it (most
+                        popular components have the by now) then all you need to do to grab a copy using: 
+                        <span class="uk-margin-left uk-text-primary uk-text-bold">bower install 
+                        &lt;package&gt;</span>
+                    </p>
+                    <p>To install or update bower run:</p>
+                    <button class="edt-clip"><i class="uk-icon-clipboard"></i></button>
+                    <button class="edt-clip" data-clipboard-text="sudo npm install -g bower"><i class="uk-icon-clipboard"></i></button>
+                    <pre>$ sudo npm install -g bower</pre>
+                    <p>If you are like me then you are following along by copying content from your browser and pasting it to your
+                        shell. But as we just installed bower, I wonder if there is a modern approach to copying text to your 
+                        clipboard. Let&apos;s check:
+                    </p>
+                    
+                    <button class="edt-clip" data-clipboard-text="bower search clipboard"><i class="uk-icon-clipboard"></i></button>
+                    <pre>$ bower search clipboard
+Search results:
+
+    zeroclipboard git://github.com/zeroclipboard/zeroclipboard.git
+    angular-zeroclipboard git://github.com/lisposter/angular-zeroclipboard.git
+    jquery-zeroclipboard git://github.com/balsamiq/jquery-zeroclipboard.git
+    ez-zero-clipboard git://github.com/jdewit/ez-zero-clipboard.git
+    cp-clipboard git://github.com/jon301/cp-clipboard.git
+    image-clipboard git://github.com/jorgenbs/ImageClipboard.git
+    angular-clipboard git://github.com/omichelsen/angular-clipboard.git
+    clipboard.js git://github.com/lgarron/clipboard.js.git
+    clipboard-button git://github.com/omichelsen/clipboard-button.git
+    react-copy-to-clipboard git://github.com/bower-registry/react-copy-to-clipboard.git
+    ngclipboard git://github.com/sachinchoolur/ngclipboard.git
+    purescript-zclipboard git://github.com/slamdata/purescript-zclipboard.git
+    zeroclipboard-qbt https://gitcafe.com/QiaoButang/zeroclipboard-qbt.git
+    jr-clipboard git://github.com/janresiak/jr-clipboard.git
+    clipboard git://github.com/zenorocha/clipboard.js.git</pre>
+    
+                    <p>Apparently there are quite a few projects related to the clipboard. Lets examine one.</p>
+                    
+                    <button class="edt-clip" data-clipboard-text="bower info clipboard"><i class="uk-icon-clipboard"></i></button>
+                    <pre>$ bower info clipboard
+bower cached        git://github.com/zenorocha/clipboard.js.git#1.5.5
+bower validate      1.5.5 against git://github.com/zenorocha/clipboard.js.git#*
+
+{
+  name: 'clipboard',
+  version: '1.5.5',
+  description: 'Modern copy to clipboard. No Flash. Just 2kb',
+  license: 'MIT',
+  &vellip;
+  homepage: 'https://github.com/zenorocha/clipboard.js'
+  &vellip;
+}
+
+Available versions:
+  - 1.5.5
+  - 1.5.4
+  &vellip;  
+  - 1.0.0
+You can request info for a specific version with 'bower info clipboard#<version>'</pre>
+
+                    <p class="uk-margin-large-top">Ok it&apos;s got a MIT license - so let&apos;s go to out dev directory and
+                        grab a copy&hellip;</p>
+                                                
+                    <button class="edt-clip" data-clipboard-text="bower install clipboard"><i class="uk-icon-clipboard"></i></button>                                                
+                    <pre>$ cd dev
+                        
+$ bower install clipboard
+bower cached        git://github.com/zenorocha/clipboard.js.git#1.5.5
+bower validate      1.5.5 against git://github.com/zenorocha/clipboard.js.git#*
+bower install       clipboard#1.5.5
+
+clipboard#1.5.5 bower_components/clipboard</pre>  
+
+                    <p class="uk-margin-large-top">You can then look at the source, read the doc and generally
+                        decide whether or not this solves your problem. Incidentally I did not know anything
+                        about the clipboard component before I started writing this document but I now have added its
+                        functionality to the system (even in this document).
+                    </p>
+                    <p>
+                        To accept the changes re-run bower:  <span class="uk-margin-left uk-text-primary uk-text-bold">
+                        bower install clipboard --save-dev</span>
+                        <button class="edt-clip" data-clipboard-text="bower install clipboard --save-dev"><i class="uk-icon-clipboard"></i></button>                                                
+                    <p>
+                        
+                    <!-- tsd -->
+                    <h3>tds</h3>
+                    
+                    <!-- maven -->
+                    <h3>maven</h3>
+                        
+                        
                     <hr class="uk-article-divider">
                     <h4 id="automatic-preprocessing"><a href="#automatic-preprocessing" class="uk-link-reset">Automatic preprocessing</a></h4>
                     <p>ElectricDiscoTech uses <a href="http://gruntjs.com/">Grunt</a> to automate the process of:
@@ -180,11 +315,12 @@
                         </ul>
                         
                     <hr class="uk-article-divider">                        
-                    <h3>Do the hustle</h3>
-                    
+                    <h3>Do the hustle</h3>                    
                 </article>
             </div>
         </div>
     </div>
 </body>
+<script src="../../js/clipboard.min.js"></script>
+<script>new Clipboard('.edt-clip');</script>
 </html>
