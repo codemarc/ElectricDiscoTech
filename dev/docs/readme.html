@@ -194,11 +194,13 @@
                         <li><a href="http://definitelytyped.org/tsd/">tsd</a> - package manager to search and install TypeScript
                             definition files</li>
                         <li><a href="https://maven.apache.org/index.html">maven</a> - a package manager and build tool for Java</li>
-                    </ul>              
-                          
-                    <h5>Install/Update each package manager</h5>
+                    </ul> 
+                    <p>To start the good times a rolling you need to install and/or update each package manager and the  
+                        use each to bootstrap <i><b>edt</i></b>.
+                    </p> 
                     
                     <!-- npm -->
+                    <hr class="uk-margin-large-top uk-article-divider">
                     <h3>npm</h3>
                     <p><a href="https://www.npmjs.com/">npm</a> is part of <a href="https://nodejs.org">Node.js</a>. To see if you have 
                         npm installed go to a command line and run. If you get a command not found or some other error then you probably 
@@ -213,8 +215,24 @@ $ sudo npm install -g npm
 
 $ npm -version
 3.4.1</pre>
+                    <p>
+                        Once you have a useable npm your can use it to bootstrap the required grunt components.
+                        <a href="http://gruntjs.com/">Grunt</a> is a javascript task runner that is used in 
+                        this project. It is used to help automate portions of a developers normal workflow.
+                        Grunt depends on node so we can use the npm to install grunt and its dependencies.
+                        From the dev directory issue the following: 
+                    </p>
+                    <button class="edt-clip" data-clipboard-text="npm install"><i class="uk-icon-clipboard"></i></button>
+                    <pre>$ npm install</pre>
+                    <p>
+                        npm reads the package.json file located in the dev directory and goes to the node repository
+                        to pull all the dependencies. It may take some time to grab the latest files (depending
+                        on your networks speed), so have a little patience. 
+                    </p>
+                          
                     <!-- bower -->
-                    <h3 class="uk-margin-large-top">bower</h3>
+                    <hr class="uk-margin-large-top uk-article-divider">
+                    <h3>bower</h3>
                     <p><a href="http://bower.io/">bower</a> is billed as a package manager for the web. What it saves you from is endless hours
                         of searching for source components. If you know the name of a component and its author has created a package for it (most
                         popular components have the by now) then all you need to do to grab a copy using: 
