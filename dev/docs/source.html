@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="An approach to developing modern web applications">
+    <meta name="author" content="Marc J. Greenberg">
+    <title>ElectricDiscoTech</title>
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/style.min.css" type="text/css">
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/uikit.min.js"></script>
+    <script src="../../js/clipboard.min.js"></script>
+</head>
+
+<body class="edt-background">
+    <nav class="edt-navbar uk-navbar uk-navbar-attached">
+        <div class="uk-container uk-container-center">
+            <a class="edt-logo uk-navbar-brand uk-hidden-small" href="">
+                <img class="uk-margin uk-margin-remove" src="../../images/discoball.svg" width="90" height="28" title="ElectricDiscoTech" alt="EDT">
+                <span class="edt-tla">EDT</span>
+            </a>
+            <ul class="uk-navbar-nav uk-hidden-small">
+                <li class="uk-active"><a href="readme.html">Motivation</a></li>
+                <li><a href="">User Interface</a></li>
+                <li><a href="">Api</a></li>
+                <li><a href="">Services</a></li>
+            </ul>
+            <a href="#edt-offcanvas" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas></a>
+            <div class="uk-navbar-brand uk-navbar-center uk-visible-small"><img src="../../images/discoball.svg" width="90" height="30" title="ElectricDiscoTech" alt="EDT"></div>
+        </div>
+    </nav>
+    <div class="edt-middle">
+        <div class="uk-container uk-container-center">
+            <div class="uk-grid" data-uk-grid-margin>
+                <div class="edt-sidebar uk-width-medium-1-4 uk-hidden-small">
+                    <ul class="edt-nav uk-nav" data-uk-nav>
+                        <li class="uk-nav-header">Concepts</li>
+                        <li class="uk-active"><a href="readme.html">Basics</a></li>
+                        <li><a href="source.html">Source</a></li>
+                        <li class="uk-nav-header">Technology</li>
+                        <li><a href="">Developer</a></li>
+                        <li><a href="">Runtime</a></li>
+                        <li><a href="">Build</a></li>
+                        <li><a href="">Package</a></li>
+                    </ul>
+                </div>
+                <div class="edt-main uk-width-medium-3-4">
+                    <article class="uk-article">
+
+                        <h2 id="github"><a href="#github" class="uk-link-reset">Source</a></h2>
+                        <p>
+                            ElectricDiscoTech is built by <a href="https://en.wikipedia.org/wiki/Standing_on_the_shoulders_of_giants">standing on the shoulders 
+                            of the giants</a>, open source giants. <span class="edt">Edt</span> is hosted on
+                            <a href="https://github.com/codemarc/ElectricDiscoTech">GitHub</a> and licensed under
+                            <a href="http://opensource.org/licenses/MIT">MIT license</a>. You're welcome to use it
+                            for all your personal and commercial projects. To access all source files, just clone
+                            the repository on
+                            <a href="https://github.com/codemarc/ElectricDiscoTech">GitHub</a> or download the latest
+                            version. In fact this file is part of the developers documentation in the dev/doc directory.
+                        </p>
+                        <p>
+                            <a class="uk-button uk-button-small uk-button-primary uk-border-rounded" 
+                            href="https://github.com/codemarc/ElectricDiscoTech/archive/master.zip">
+                            Download source</a>
+                        </p>
+
+                    <hr class="uk-article-divider">
+                    <h2 id="file-structure"><a href="#file-structure" class="uk-link-reset">File structure</a></h2>
+                    <p>
+                        ElectricDiscoTech employs an intuitive file layout/orgainzation. By adopting it as a convention you can decrease the number
+                        of decisions that need to be made. Although it is sourced in a single tree, logically it is broken down into as:
+                    </p>
+                    
+                    <div class="uk-grid">
+                        <div class="uk-width-medium-1-2">
+                            <div class="uk-panel">
+                                <h3 class="uk-panel-title">Develop</h3>
+                                <div class="uk-overflow-container">
+                                    <table class="uk-table uk-table-striped uk-text-nowrap">
+                                        <thead><tr><th>Folder</th><th>Description</th></tr></thead>
+                                        <tbody>
+                                            <tr><td><code>/dev</code></td><td>source components</td></tr>
+                                            <tr><td><code>/dev/bower_components</code></td><td>source pulled by bower</td></tr>
+                                            <tr><td><code>/dev/docs</code></td><td>docs for <i><b>edt</b></i></td></tr>
+                                            <tr><td><code>/dev/js</code></td><td>compiled from typescript</td></tr>
+                                            <tr><td><code>/dev/less</code></td><td>less source</td></tr>
+                                            <tr><td><code>/dev/node_modules</code></td><td>runtime used by grunt</td></tr>
+                                            <tr><td><code>/dev/ts</code></td><td>typescript source</td></tr>
+                                            <tr><td><code>/dev/typings</code></td><td>typescript definitions</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>                                
+                            </div>                                                        
+                        </div>
+                        <div class="uk-width-medium-1-2">   
+                            <div class="uk-panel">
+                                <h3 class="uk-panel-title">Deploy</h3>                                
+                                <div class="uk-overflow-container">
+                                    <table class="uk-table uk-table-striped uk-text-nowrap">
+                                        <thead><tr><th>Folder</th><th>Description</th></tr></thead>
+                                        <tbody>
+                                            <tr><td><code>/css</code></td><td>compiled/minified css for this site</td></tr>
+                                            <tr><td><code>/fonts</code></td><td>fonts defintitions</td></tr>
+                                            <tr><td><code>/images</code></td><td>images used by the webapp</td></tr>
+                                            <tr><td><code>/js</code></td><td>compiled minified js including external libraries</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>                                                                
+                            </div>
+                        </div>
+                    </div>
+                    </article>
+                </div>
+                <div class="uk-width-medium-1-4">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="edt-footer">
+        <div class="uk-container uk-container-center uk-text-center">
+
+            <ul class="uk-subnav uk-subnav-line uk-flex-center">
+                <li><a href="http://github.com/codemarc/ElectricDiscoTech">GitHub</a></li>
+                <li><a href="http://github.com/codemarc/ElectricDiscoTech">Issues</a></li>
+                <li><a href="http://github.com/codemarc/ElectricDiscoTech/blob/master/CHANGELOG.md">Changelog</a></li>
+                <li><a href="https://twitter.com/electricdiscot">Twitter</a></li>
+            </ul>
+            <div class="uk-panel">
+                <p>
+                    <a href="http://codemarc.net">codemarc</a> production.<br>
+                    Licensed under <a href="http://opensource.org/licenses/MIT">MIT license</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>new Clipboard('.edt-clip');</script>
+</html>
