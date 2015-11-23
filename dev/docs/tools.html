@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="An approach to developing modern web applications">
+    <meta name="author" content="Marc J. Greenberg">
+    <title>ElectricDiscoTech</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.min.css" type="text/css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/uikit.min.js"></script>
+</head>
+
+<body class="edt-background">
+    <nav class="edt-navbar uk-navbar uk-navbar-attached">
+        <div class="uk-container uk-container-center">
+            <a class="edt-logo uk-navbar-brand uk-hidden-small" href="">
+                <img class="uk-margin uk-margin-remove" src="images/discoball.svg" width="90" height="28" title="ElectricDiscoTech" alt="EDT">
+                <span class="edt-tla">EDT</span>
+            </a>
+            <ul class="uk-navbar-nav uk-hidden-small">
+                <li class="uk-active"><a href="readme.html">Motivation</a></li>
+                <li><a href="">User Interface</a></li>
+                <li><a href="">Api</a></li>
+                <li><a href="">Services</a></li>
+            </ul>
+            <a href="#edt-offcanvas" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas></a>
+            <div class="uk-navbar-brand uk-navbar-center uk-visible-small">
+                <img src="images/discoball.svg" width="90" height="30" title="ElectricDiscoTech" alt="EDT">
+            </div>
+        </div>
+    </nav>
+    <div class="uk-grid" data-uk-grid-margin>
+        <div class="uk-width-medium-1-1">
+            <div class="edt-front2"></div>
+        </div>
+    </div>    
+    <div class="edt-middle">
+        <div class="uk-container uk-container-center">
+            <div class="uk-grid" data-uk-grid-margin>
+                <div class="edt-sidebar uk-width-medium-1-4 uk-hidden-small">
+                    <ul class="edt-nav uk-nav" data-uk-nav>
+                        <li class="uk-nav-header">Conceptual</li>
+                        <li><a href="readme.html">Dance Floor</a></li>
+                        <li><a href="source.html">First Steps</a></li>
+                        <li class="uk-active"><a href="tools.html">Do the Hustle</li>
+                        <li class="uk-nav-header"></li>
+                        <li><a href=""></a></li>
+                    </ul>
+                    <img src="images/discodancing.png"/>
+                </div>
+                <div class="edt-main uk-width-medium-3-4">
+                    <article class="uk-article">
+                        <img src="images/discopacman.png" width="64"/>
+                        <h2 id="pacman">
+                            <a href="#pacman" class="uk-link-reset">
+                                &bull; &bull; &bull; <span>Pac</span>kage <span>Man</span>agement
+                            </a>
+                        </h2>
+                        <hr class="uk-article-divider">
+                        <div class="uk-grid">
+                            <div class="uk-width-medium-1-2">
+
+                                <p>
+                                    In the postmodern software world the number of packages and package managers is growing steadily.
+                                    Package managers are used to install, remove, upgrade and configue packages. Packages are archives 
+                                    of files that include all the files making up a piece of software (such as an application itself, 
+                                    shared libraries, development packages containing files needed to build software against a 
+                                    library, ...) and, eventually, instructions on the way to make them work.
+                                </p>
+                                <p>
+                                    <b><i>edt</i></b> relies on the following package to bootstrap itself:
+                                </p>
+                                
+                            </div>
+                            <div class="uk-width-medium-1-4">
+                                <a href="images/modcounts.png"><img src="images/modcounts.png"></a>
+                                <legend class="uk-margin-left uk-text-small">
+                                    <a class="uk-margin-left" href="http://www.modulecounts.com/">www.modulecounts.com</a>
+                                </legend>
+                            </div>
+                        </div>
+                        <dl>
+                            <dt><a href="https://www.npmjs.com/">npm</a> - a package manager for Node.js</dt> 
+                                
+                            <dt><a href="http://bower.io/">bower</a> - a package manager for the web</dt>
+                            
+                            <p>
+                                As you continue to develop your project you will need to add these pacman&apos;s as well:
+                            </p>
+                                                                    
+                            <dt><a href="https://maven.apache.org/index.html">maven</a> - a package manager and build tool for Java</dt>
+                            
+                            <dt><a href="http://definitelytyped.org/tsd/">tsd</a> - package manager to search and install 
+                                TypeScript definition files<br/><br/></dt>
+                                
+                        </dl>
+                    </article>
+                </div>
+
+                <div class="uk-width-medium-1-4">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="edt-footer">
+        <div class="uk-container uk-container-center uk-text-center">
+
+            <ul class="uk-subnav uk-subnav-line uk-flex-center">
+                <li><a href="http://github.com/codemarc/ElectricDiscoTech">GitHub</a></li>
+                <li><a href="http://github.com/codemarc/ElectricDiscoTech">Issues</a></li>
+                <li><a href="http://github.com/codemarc/ElectricDiscoTech/blob/master/CHANGELOG.md">Changelog</a></li>
+                <li><a href="https://twitter.com/electricdiscot">Twitter</a></li>
+            </ul>
+            <div class="uk-panel">
+                <p>
+                    <a href="http://codemarc.net">codemarc</a> production.<br>
+                    Licensed under <a href="http://opensource.org/licenses/MIT">MIT license</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>new Clipboard('.edt-clip');</script>
+</html>

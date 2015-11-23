@@ -10,7 +10,8 @@ module.exports = function(grunt) {
                     dumpLineNumbers: 'false'
                 },
                 files: {
-                    "../css/style.min.css": "less/style.less"
+                    "../css/style.min.css": "less/style.less",
+                    "docs/css/style.min.css": "less/docs.less"
                 }
             }
         },
