@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/style.min.css" type="text/css">
     <script src="js/jquery.min.js"></script>
     <script src="js/uikit.min.js"></script>
+    <script src="js/clipboard.min.js"></script>
     <script src="js/edt.min.js"></script>
 </head>
 
@@ -30,7 +31,7 @@
                         <li class="uk-nav-header">Conceptual</li>
                         <li><a href="readme.html">Dance Floor</a></li>
                         <li><a href="source.html">First Steps</a></li>
-                        <li><a href="tools.html">Do the Hustle</li>
+                        <li><a href="tools.html">Do the Hustle</a></li>
                             <ul class="uk-nav uk-margin-left">
                                 <li class="uk-active"><a href="winivp.html"><i class="uk-icon-windows uk-margin-right"></i>Windows (ivp)</a></li>
                                 <li><a href="linuxivp.html"><i class="uk-icon-linux uk-margin-right"></i>Linux (ivp)</a></li>
@@ -39,18 +40,20 @@
                         <li class="uk-nav-header"></li>
                         <li><a href=""></a></li>
                     </ul>
-                    <img class="uk-margin-large-left" src="images/tostudio54.png" width="96px"/>
+                    <a href="images/azure3.png"><img style="border: 1px solid #000000;" src="images/azure3.png" width="86%"></a>
+                    <legend class="uk-margin-large-left uk-margin-large-bottom uk-text-small">
+                        studio54.cloudapp.net
+                    </legend>
                 </div>
                 <div class="edt-main uk-width-medium-3-4">
                     <article class="uk-article">
                         <img src="images/win8.png" width="64"/>
                         <h2 id="pacman">
-                            <a href="#pacman" class="uk-link-reset">
-                                &nbsp;&nbsp;Windows ivp for <i class="edt-tla2">EDT</i>
-                            </a>
+                            <a href="#pacman" class="uk-link-reset">&nbsp;&nbsp;Windows ivp for <i class="edt-tla2">EDT</i></a>
+                            <img class="uk-margin-large-left" src="images/tostudio54.png" width="64px"/>
                         </h2>
                         <hr class="uk-article-divider">
-                        <div class="uk-grid">
+                        <div class="uk-grid"> 
                             <div class="uk-width-medium-1-2">
 
                                 <p>
@@ -61,39 +64,74 @@
                                     Windows 8.1 on a host named <a href="https://youtu.be/dEDO4eXIxQg">studio54</a>
                                 </p>
                                 <p>
-                                   Then using Microsoft Remote Desktop, login and start a command prompt and we are ready 
-                                   to rumble.
+                                   Using Microsoft Remote Desktop, I login and change the background to somthing blueish. 
+                                   I <a href="https://www.google.com/chrome/browser/desktop/index.html?system=true&standalone=1">
+                                   install chrome</a>, and <a href="https://git-for-windows.github.io/">git for windows</a> 
+                                   accepting all defaults (next next next &hellip;). 
                                 </p>
-
+                                <p>
+                                    A good code editor is the hammer in a modern web application developers toolbox. For this project 
+                                    I am using one of Microsoft&apos;s latest concoctions, <a href=https://code.visualstudio.com/>Visual Studio Code</a>.
+                                    It&apos;s open source and <a href="https://github.com/Microsoft/vscode">forkable on github</a> and 
+                                    I really like. 
+                                </p>
                             </div>
                             <div class="uk-width-medium-1-4">
                                 
                                 <a href="images/azure1.png"><img style="border: 1px solid #000000;" src="images/azure1.png"></a>
-                                <legend class="uk-margin-large-left uk-margin-large-bottom uk-text-small">
+                                <legend class="uk-margin-large-left uk-margin-bottom uk-text-small">
                                     <a href="https://portal.azure.com/">portal.azure.com</a>
                                 </legend>
 
                                 <a href="images/azure2.png"><img style="border: 1px solid #000000;" src="images/azure2.png"></a>
-                                <legend class="uk-margin-large-left uk-margin-large-bottom uk-text-small">
+                                <legend class="uk-margin-large-left uk-margin-bottom uk-text-small">
                                     <a href="https://portal.azure.com/">portal.azure.com</a>
                                 </legend>
 
-                                <a href="images/azure3.png"><img style="border: 1px solid #000000;" src="images/azure3.png"></a>
-                                <legend class="uk-margin-large-left uk-margin-large-bottom uk-text-small">
-                                    studio54.cloudapp.net
-                                </legend>
-                                
                             </div>
                         </div>
                     </article>
                 </div>
-
+                
                 <div class="uk-width-medium-1-4">
+                </div>
+            </div>
+                
+            <div class="uk-grid" style="margin-top:-36px;">
+                <div class="uk-width-medium-1-4">
+                    <a href="images/edtinvscode.png"><img style="border: 1px solid #000000;margin-top:11em" width="90%" src="images/edtinvscode.png"></a>
+                    <legend class="uk-margin-large-left uk-margin-bottom uk-text-small">
+                        <span class="edt-tla2 uk-margin-left">EDT</span> in VSCode
+                    </legend>
+                     
+                </div> 
+                <div class="uk-width-medium-2-4">
+                    <p>Let&apos;s start a shell and validate the ability to run git from the command prompt:</p>
+                    <button class="edt-clip" data-clipboard-text="git --version"><i class="uk-icon-clipboard"></i></button>
+                    <pre class="edt-border uk-margin-large-bottom">C:\Users\codemarc>git --version
+git version 2.6.3.windows.1
+</pre>
+                    
+                    <p>You should see output similar to above. If not you may still be able use <span class="edt-tla2">EDT</span> by
+                    <a href="https://github.com/codemarc/ElectricDiscoTech/archive/master.zip">downloading</a> and unzipping it.
+                    If you can use use git then clone a copy of edt:
+                    </p>
+                    <button class="edt-clip" data-clipboard-text="git clone https://github.com/codemarc/ElectricDiscoTech"><i class="uk-icon-clipboard"></i></button>
+                    <pre class="edt-border">C:\Users\codemarc>git clone https://github.com/codemarc/ElectricDiscoTech
+Cloning into 'ElectricDiscoTech'...
+remote: Counting objects: 180, done.
+remote: Compressing objects: 100% (127/127), done.
+rRemote: Total 180 (delta 67), reused 148 (delta 38), pack-reused 0
+Receiving objects:  86% (155/180)
+Receiving objects: 100% (180/180), 3.60 MiB | 0 bytes/s, done.
+Resolving deltas: 100% (67/67), done.
+Checking connectivity... done.
+</pre>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="inc:site/footer.html"></div>
+    <div class="inc:site/footer.html"></div>    
 </body>
+<script>new Clipboard('.edt-clip');</script>
 </html>
