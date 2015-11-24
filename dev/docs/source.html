@@ -12,27 +12,11 @@
     <link rel="stylesheet" href="css/style.min.css" type="text/css">
     <script src="js/jquery.min.js"></script>
     <script src="js/uikit.min.js"></script>
+    <script src="js/edt.min.js"></script>
 </head>
 
 <body class="edt-background">   
-    <nav class="edt-navbar uk-navbar uk-navbar-attached">
-        <div class="uk-container uk-container-center">
-            <a class="edt-logo uk-navbar-brand uk-hidden-small" href="">
-                <img class="uk-margin uk-margin-remove" src="images/discoball.svg" width="90" height="28" title="ElectricDiscoTech" alt="EDT">
-                <span class="edt-tla">EDT</span>
-            </a>
-            <ul class="uk-navbar-nav uk-hidden-small">
-                <li class="uk-active"><a href="readme.html">Motivation</a></li>
-                <li><a href="">User Interface</a></li>
-                <li><a href="">Api</a></li>
-                <li><a href="">Services</a></li>
-            </ul>
-            <a href="#edt-offcanvas" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas></a>
-            <div class="uk-navbar-brand uk-navbar-center uk-visible-small">
-                <img src="images/discoball.svg" width="90" height="30" title="ElectricDiscoTech" alt="EDT">
-            </div>
-        </div>
-    </nav>
+    <div class="inc:site/header.html"></div>
     <div class="uk-grid" data-uk-grid-margin>
         <div class="uk-width-medium-1-1">
             <div class="edt-front2"></div>
@@ -74,46 +58,58 @@
                     <hr class="uk-article-divider">
                     <h2 id="file-structure"><a href="#file-structure" class="uk-link-reset">File structure</a></h2>
                     <p>
-                        ElectricDiscoTech employs an intuitive file layout/orgainzation. By adopting it as a convention you can decrease the number
-                        of decisions that need to be made. Although it is sourced in a single tree, logically it is broken down into as:
+                        ElectricDiscoTech employs an intuitive file layout/orgainzation. There is great wisdom that can be
+                        derived from the notion of convention over configuration. By adopting this layout it as a convention 
+                        you can decrease the number little of decisions that need to be made, reducing complexity and "free
+                        your mind" to focus on the content:
                     </p>
                     
                     <div class="uk-grid">
-                        <div class="uk-width-medium-1-2">
-                            <div class="uk-panel">
-                                <h3 class="uk-panel-title">Develop</h3>
-                                <div class="uk-overflow-container">
-                                    <table class="uk-table uk-table-striped uk-text-nowrap">
-                                        <thead><tr><th>Folder</th><th>Description</th></tr></thead>
-                                        <tbody>
-                                            <tr><td><code>/dev</code></td><td>source components</td></tr>
-                                            <tr><td><code>/dev/bower_components</code></td><td>source pulled by bower</td></tr>
-                                            <tr><td><code>/dev/docs</code></td><td>docs for <i><b>edt</b></i></td></tr>
-                                            <tr><td><code>/dev/js</code></td><td>compiled from typescript</td></tr>
-                                            <tr><td><code>/dev/less</code></td><td>less source</td></tr>
-                                            <tr><td><code>/dev/node_modules</code></td><td>runtime used by grunt</td></tr>
-                                            <tr><td><code>/dev/ts</code></td><td>typescript source</td></tr>
-                                            <tr><td><code>/dev/typings</code></td><td>typescript definitions</td></tr>
-                                        </tbody>
-                                    </table>
-                                </div>                                
-                            </div>                                                        
-                        </div>
-                        <div class="uk-width-medium-1-2">   
-                            <div class="uk-panel">
-                                <h3 class="uk-panel-title">Deploy</h3>                                
-                                <div class="uk-overflow-container">
-                                    <table class="uk-table uk-table-striped uk-text-nowrap">
-                                        <thead><tr><th>Folder</th><th>Description</th></tr></thead>
-                                        <tbody>
-                                            <tr><td><code>/css</code></td><td>compiled/minified css for this site</td></tr>
-                                            <tr><td><code>/fonts</code></td><td>fonts defintitions</td></tr>
-                                            <tr><td><code>/images</code></td><td>images used by the webapp</td></tr>
-                                            <tr><td><code>/js</code></td><td>compiled minified js including external libraries</td></tr>
-                                            <tr><td><code>/</code></td><td>html content</td></tr>
-                                        </tbody>
-                                    </table>
-                                </div>                                                                
+                        <div class="uk-width-medium-1-1">
+                            <div class="uk-panel">                                
+                                <dl class="edt-description uk-description-list-horizontal">
+                                <dt style="text-shadow:none;color:#444;font-weight:normal;"><u>Folder</u></dt>
+                                <dd style="text-shadow:none;margin-bottom:12px;"><u>Content</u></dd>
+                                
+                                <dt>/</dt>
+                                <dd>Top level root of the client side of a modern webapp, It is the resolution to the
+                                    <a href="http://2ndscale.com/rtomayko/2008/wtf-is-an-href-anyway">href</a>=&quot;/&quot;.
+                                    Your apps markup is served from here this location. Any subfolder not listed below 
+                                    may be used to organize your apps content. 
+                                </dd>
+                                <br/>
+                                <dt>/css</dt>
+                                <dd>Your compiled/minified css code. Compiled from what? There is a question here 
+                                    <a href="https://www.google.com/search?q=less+vs+sass">less vs. sass</a>, which one?
+                                    ElectricDiscoTech is using less for now. And in the end the only guidence here
+                                    is that you use a preprocessor. 
+                                </dd>
+                                <br/>
+                                <dt>/fonts</dt>
+                                <dd>Fonts defintitions. Another topic that spurs debate, Some say that fonts should be 
+                                    pulled from a Content delivery network (CDN) and there are several valid reasons why 
+                                    you might choose to. There are just as many reasons why you would not want this so 
+                                    one again the choice is left open.
+                                </dd> 
+                                <br/>
+                                <dt>/images</dt>
+                                <dd>Images files used site wide. Its is a good idea to normalize your images as leads to a more
+                                    consistent environment. Just like fonts the topic is connected with the CDN debate. 
+                                </dd>
+                                <br/>
+                                <dt>/js</dt>
+                                <dd>This is the location from which minified "production" javascript is served.</dd>
+                                <br/>
+                                <dt>/dev</dt>
+                                <dd>An entire subtree of functionality used to build your modern web application. This is where you 
+                                    put your typescript source and definitions, as well as any node, and bower managed content. 
+                                    In /dev/docs you can find the 
+                                    
+                                    Addtionality
+                                    you it is the location of this file as wall as aas well as its
+                                    own inner documentation site wholly contaned om the /dev/docs location.
+                                </dd>
+                                </dl>
                             </div>
                         </div>
                     </div>
@@ -125,24 +121,6 @@
         </div>
     </div>
 
-    <div class="edt-footer">
-        <div class="uk-container uk-container-center uk-text-center">
-
-            <ul class="uk-subnav uk-subnav-line uk-flex-center">
-                <li><a href="http://github.com/codemarc/ElectricDiscoTech">GitHub</a></li>
-                <li><a href="http://github.com/codemarc/ElectricDiscoTech">Issues</a></li>
-                <li><a href="http://github.com/codemarc/ElectricDiscoTech/blob/master/CHANGELOG.md">Changelog</a></li>
-                <li><a href="https://twitter.com/electricdiscot">Twitter</a></li>
-            </ul>
-            <div class="uk-panel">
-                <p>
-                    <a href="http://codemarc.net">codemarc</a> production.<br>
-                    Licensed under <a href="http://opensource.org/licenses/MIT">MIT license</a>.
-                </p>
-            </div>
-        </div>
-    </div>
-
+    <div class="inc:site/footer.html"></div>
 </body>
-<script>new Clipboard('.edt-clip');</script>
 </html>

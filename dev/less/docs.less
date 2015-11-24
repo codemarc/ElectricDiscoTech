@@ -7,6 +7,10 @@
 @import url(https://fonts.googleapis.com/css?family=Warnes);
 @import "edt.less";
 
+.edt {
+	font-weight: bold;
+	font-style: italic;
+}
 
 :not(pre)>code, :not(pre)>kbd, :not(pre)>samp {
 	color:hotpink;
@@ -14,21 +18,21 @@
 }
 
 .edt-logo {
-	font-family: 'Lobster';	
-	margin-top: 1px;
-	font-size: 14pt;
+	width: 112px;
+	color:hotpink;
+	text-shadow: 1px 1px 0 rgba(200,200,200,1); 
+	img {
+	width: 42px;
+	padding-bottom: 2px;
+	}
 }
 
 .edt-tla {
 	position: absolute;
 	top: 9px;
-	margin-left: 40px;
+	font-family: 'Lobster';	
 }
 
-.edt {
-	font-weight: bold;
-	font-style: italic;
-}
 
 .edt-front {
 	.uk-vertical-align;
@@ -74,6 +78,13 @@
 		font-style: italic;
 		text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #ff00de;
 		
+	}
+}
+
+.edt-description {
+	dt {
+		color:hotpink;
+		text-shadow: 1px 1px 0 rgba(200,200,200,1);
 	}
 }
 
