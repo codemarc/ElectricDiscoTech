@@ -40,7 +40,7 @@
                         <li class="uk-nav-header"></li>
                         <li><a href=""></a></li>
                     </ul>
-                    <img src="images/studio54.png" width="50%"></a>
+                    <a href="https://youtu.be/dEDO4eXIxQg"><img src="images/studio54.png" width="50%"></a>
                     <legend class="uk-margin-left uk-margin-large-bottom uk-text-small">
                         studio54.cloudapp.net
                     </legend>
@@ -62,6 +62,9 @@
                                     I use Microsoft Azure to kick off a fresh instance of 
                                     Windows 8.1 on a host named <a href="https://youtu.be/dEDO4eXIxQg">studio54</a>
                                 </p>
+
+                                <div id="fb-root"></div><script>(function(d, s, id) {  var js, fjs = d.getElementsByTagName(s)[0];  if (d.getElementById(id)) return;  js = d.createElement(s); js.id = id;  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";  fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script><div class="fb-video" data-allowfullscreen="1" data-href="https://www.facebook.com/video.php?v=1180085518684882"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/video.php?v=1180085518684882"><a href="https://www.facebook.com/video.php?v=1180085518684882"></a><p>#Studio54</p>Posted by <a href="https://www.facebook.com/studio54tributebykey/">Studio 54</a> on Monday, October 5, 2015</blockquote></div></div>
+                                
                                 <p>
                                    Using Microsoft Remote Desktop, I login and change the background to somthing blueish. 
                                    I <a href="https://www.google.com/chrome/browser/desktop/index.html?system=true&standalone=1">
@@ -74,6 +77,7 @@
                                     It&apos;s open source and <a href="https://github.com/Microsoft/vscode">forkable on github</a> and 
                                     I really like. 
                                 </p>
+                                
                             </div>
                             <div class="uk-width-medium-1-4">
                                 
@@ -101,15 +105,16 @@
                 </div>
             </div>
                 
-            <div class="uk-grid" style="margin-top:-36px;">
+            <div class="uk-grid">
                 <div class="uk-width-medium-1-4">
-                    <a href="images/edtinvscode.png"><img style="border: 1px solid #000000;margin-top:11em" width="90%" src="images/edtinvscode.png"></a>
+                    <a href="images/edtinvscode.png"><img style="border: 1px solid #000000;margin-top:3.5em" width="90%" src="images/edtinvscode.png"></a>
                     <legend class="uk-margin-large-left uk-margin-bottom uk-text-small">
                         <span class="edt-tla2 uk-margin-left">EDT</span> in VSCode
                     </legend>
                      
                 </div> 
                 <div class="uk-width-medium-2-4">
+                    <hr class="uk-article-divider">
                     <p>Let&apos;s start a shell and validate the ability to run git from the command prompt:</p>
                     <button class="edt-clip" data-clipboard-text="git --version"><i class="uk-icon-clipboard"></i></button>
                     <pre class="edt-border uk-margin-large-bottom">C:\Users\codemarc>git --version
@@ -133,7 +138,47 @@ Checking connectivity... done.
 </pre>
                 </div>
             </div>
-        </div>
+        
+        <div class="uk-grid">
+            <div class="uk-width-medium-1-4">
+                <img style="margin-top:3.5em" src="images/nodejs-npm.png" width="70%">
+            </div> 
+            <div class="uk-width-medium-2-4">
+                <hr class="uk-article-divider">
+                <p>Now let&apos;s see which version of npm is installed:</p>
+                <button class="edt-clip" data-clipboard-text="npm -v"><i class="uk-icon-clipboard"></i></button>
+                    <pre>C:\Users\codemarc\ElectricDiscoTech\dev>npm -v
+'npm' is not recognized as an internal or external command,
+operable program or batch file.
+</pre>
+                <p>Oops, fogot to install node. <a href="https://www.npmjs.com/">npm</a> is part of <a href="https://nodejs.org">Node.js</a>. So go and
+                install it. Once its installed you can update it.
+                </p>
+                
+                <button class="edt-clip" data-clipboard-text="npm install -g npm"><i class="uk-icon-clipboard"></i></button>
+                <pre class="edt-border uk-margin-large-bottom">C:\Users\codemarc>npm -v
+2.14.7
+
+C:\Users\codemarc>npm install -g npm
+C:\Users\codemarc\AppData\Roaming\npm\npm -> C:\Users\codemarc\AppData\
+Roaming\npm\node_modules\npm\bin\npm-cli.js
+npm@3.4.1 C:\Users\codemarc\AppData\Roaming\npm\node_modules\npm
+
+C:\Users\codemarc>npm -v
+3.4.1
+</pre>            
+            </div>
+        </div>        
+
+        <div class="uk-grid">
+            <div class="uk-width-medium-1-4">
+                <!--<img style="margin-top:3.5em" src="images/nodejs-npm.png" width="80%">-->
+            </div> 
+            <div class="uk-width-medium-2-4">
+                <hr class="uk-article-divider">
+            </div>
+        </div>        
+        
     </div>
     <div class="inc:site/footer.html"></div>    
 </body>
