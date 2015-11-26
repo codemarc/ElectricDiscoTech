@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="An approach to developing modern web applications">
+    <meta name="author" content="Marc J. Greenberg">
+    <title>ElectricDiscoTech</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.min.css" type="text/css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/uikit.min.js"></script>    
+    <script src="js/clipboard.min.js"></script>
+    <script src="js/edt.min.js"></script>
+</head>
+
+<body class="edt-background">
+    <div class="inc:site/header.html"></div>
+    <div class="uk-grid" data-uk-grid-margin>
+        <div class="uk-width-medium-1-1">
+            <div class="edt-front2"></div>
+        </div>
+    </div>    
+    <div class="edt-middle">
+        <div class="uk-container uk-container-center">
+            <div class="uk-grid" data-uk-grid-margin>
+                <div class="edt-sidebar uk-width-medium-1-4 uk-hidden-small">
+                    <ul class="edt-nav uk-nav" data-uk-nav>
+                        <li class="uk-nav-header">Conceptual</li>
+                        <li><a href="readme.html">Dance Floor</a></li>
+                        <li><a href="source.html">First Steps</a></li>
+                        <li><a href="tools.html">Do the Hustle</a></li>
+                        <li class="uk-active"><a href="tasks.html">Disco Pig</a></li>
+                        <li class="uk-nav-header"></li>
+                        <li><a href=""></a></li>
+                    </ul>
+                    <img class="uk-border-circle" src="images/discopig.png" width="50%"/>
+                    <ul class="edt-nav uk-nav" data-uk-nav style="margin-top:94px;">
+                        <li class="uk-nav-header">Have a look at:</li>
+                        <li><a href="../package.json">package.json</a></li>
+                        <li><a href="../bower.json">bower.json</a></li>
+                        <li><a href="../Gruntfile.js">Gruntfile.js</a></li>
+                        <li class="uk-nav-header"></li>
+                        <li><a href=""></a></li>
+                    </ul>                    
+                </div>
+                <div class="edt-main uk-width-medium-3-4">
+                    <article class="uk-article">
+                        <h2 id="automate"><a href="#automate" class="uk-link-reset">Automate</a></h2>
+                        <hr class="uk-article-divider">
+                        <div class="uk-grid">
+                            <div class="uk-width-medium-1-2">
+
+                                <p>
+                                    If you have been following $(this).story() then you know that we are building 
+                                    up the components of dance, but what does that really mean?
+                                </p>
+                                <p>
+                                    When learning (or rehearsing) a new dance, each dancer 
+                                    repeats a pattern of movements many times. When applied to development, 
+                                    developers (designers, testers, etc&hellip;) identify the steps that are 
+                                    repeated over and over again. When a particular pattern becomes obvious, 
+                                    a smart developer looks for ways to automate it.
+                                </p>
+                                <p> 
+                                    $(this).subject( () => {return move2("automation");} is a normal part of the  
+                                    workflow while developing a modern web application. There are tools that
+                                    help to enable this type of automation.     
+                                <p>
+                            </div>
+                            <div class="uk-width-medium-1-4">
+                                <div class="uk-container uk-container-center uk-text-center">
+                                    <a href="https://www.youtube.com/watch?v=DJuXy1MPOco"><img class="uk-border-rounded" src="images/auto2.png" width="240px" height="315px" alt="disco robot"></a>
+                                    <a href="https://www.youtube.com/watch?v=DJuXy1MPOco">disco robot</a>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="uk-article-divider">
+                        <h3 id="automate"><a href="#automate" class="uk-link-reset">Grunt</a></h3>
+                        <div class="uk-grid">
+                            <div class="uk-width-medium-1-2">
+                                <p>
+                                    Grunt is a server side javascript application used to do the grunt work when developing
+                                    modern web applications. Grunt runs from the command line as a node application.
+                                    as long as you have node installed you can install grunt via npm.
+                                </p>
+                                <p>
+                                    If you are planning in using ElectricDiscoTech as a template for your own development project 
+                                    then grunt must be installed into the <b>DEV</b> directory.
+                                    
+                                    Since <span class="edt-tla2">EDT</span> is already setup to use grunt all you need to do is
+                                    is issue the npm install command. npm finds grunt as a dependency (by looking in the 
+                                    package.json file) and installs it.
+                                </p>                                
+                                    
+                            </div>
+                            <div class="uk-width-medium-1-2">
+                                <div class="uk-container uk-container-center uk-text-center" style="padding-right:244px">
+                                    <a href="http://gruntjs.com"><img src="images/grunt-logo.png" width="100px"></a><br/>
+                                    <a href="http:/gruntjs.com/">gruntjs.com</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="uk-grid">
+                            <div class="uk-width-3-4">                                
+                                <p>
+                                    Install the command line interface (npm install -g grunt-cli) and then use 
+                                    bower to grab/update source dependencies (listed in bower.json). And finally you are ready 
+                                    to start grunting.
+                                </p>
+                                <pre class="edt-border uk-margin-large-bottom">C:\Users\codemarc>cd ElectricDiscoTech\dev
+<button class="edt-clip" data-clipboard-text="npm install"><i class="uk-icon-clipboard"></i></button>
+C:\Users\codemarc\ElectricDiscoTech\dev>npm install
+ElectricDiscoTech@0.0.1 C:\Users\codemarc\ElectricDiscoTech\dev
+└─┬ grunt@0.4.5                                    
+  ├── async@0.1.22
+  
+  &vellip;
+
+  ├── underscore.string@2.2.1
+  └── which@1.0.9
+                 
+<button class="edt-clip" data-clipboard-text="npm install -g grunt-cli"><i class="uk-icon-clipboard"></i></button>
+C:\Users\codemarc\ElectricDiscoTech\dev>npm install -g grunt-cli
+npm WARN deprecated lodash@2.4.2: lodash@<3.0.0 is no longer maintained. Upgrade
+ to lodash@^3.0.0.
+C:\Users\codemarc\AppData\Roaming\npm\grunt -> C:\Users\codemarc\AppData\Roaming
+\npm\node_modules\grunt-cli\bin\grunt
+C:\Users\codemarc\AppData\Roaming\npm
+└─┬ grunt-cli@0.1.13
+  ├─┬ findup-sync@0.1.3
+  │ ├─┬ glob@3.2.11
+  │ │ ├── inherits@2.0.1
+  │ │ └─┬ minimatch@0.3.0
+  │ │   ├── lru-cache@2.7.3
+  │ │   └── sigmund@1.0.1
+  │ └── lodash@2.4.2
+  ├─┬ nopt@1.0.10
+  │ └── abbrev@1.0.7
+  └── resolve@0.3.1
+  
+<button class="edt-clip" data-clipboard-text="bower install"><i class="uk-icon-clipboard"></i></button>  
+C:\Users\codemarc\ElectricDiscoTech\dev>bower install
+? May bower anonymously report usage statistics to improve the tool over time? (
+Y/n) n
+? May bower anonymously report usage statistics to improve the tool over time? N
+o
+bower not-cached    git://github.com/zenorocha/clipboard.js.git#~1.5.5
+bower resolve       git://github.com/zenorocha/clipboard.js.git#~1.5.5
+bower not-cached    git://github.com/uikit/bower-uikit.git#~2.23.0
+bower resolve       git://github.com/uikit/bower-uikit.git#~2.23.0
+bower download      https://github.com/zenorocha/clipboard.js/archive/v1.5.5.tar
+.gz
+bower download      https://github.com/uikit/bower-uikit/archive/2.23.0.tar.gz
+bower extract       clipboard#~1.5.5 archive.tar.gz
+bower extract       uikit#~2.23.0 archive.tar.gz
+bower resolved      git://github.com/zenorocha/clipboard.js.git#1.5.5
+bower resolved      git://github.com/uikit/bower-uikit.git#2.23.0
+bower not-cached    git://github.com/jquery/jquery.git#>= 1.9.0
+bower resolve       git://github.com/jquery/jquery.git#>= 1.9.0
+bower download      https://github.com/jquery/jquery/archive/2.1.4.tar.gz
+bower extract       jquery#>= 1.9.0 archive.tar.gz
+bower resolved      git://github.com/jquery/jquery.git#2.1.4
+bower install       clipboard#1.5.5
+bower install       uikit#2.23.0
+bower install       jquery#2.1.4
+
+clipboard#1.5.5 bower_components\clipboard
+uikit#2.23.0 bower_components\uikit
+└── jquery#2.1.4
+
+jquery#2.1.4 bower_components\jquery
+
+<button class="edt-clip" data-clipboard-text="grunt"><i class="uk-icon-clipboard"></i></button>
+C:\Users\codemarc\ElectricDiscoTech\dev>grunt
+Running "less:development" (less) task
+>> 2 stylesheets created.
+
+Running "watch" task
+Waiting...
+</pre>  
+                      </div>                            
+                                                        
+                            
+                        </div>
+                    </article>
+                </div>
+
+                <div class="uk-width-medium-1-4">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="inc:site/footer.html"></div>
+</body>
+<script>new Clipboard('.edt-clip');</script>
+</html>
