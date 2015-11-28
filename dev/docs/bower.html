@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="An approach to developing modern web applications">
+    <meta name="author" content="Marc J. Greenberg">
+    <title>ElectricDiscoTech</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.min.css" type="text/css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/uikit.min.js"></script>    
+    <script src="js/clipboard.min.js"></script>
+    <script src="js/edt.min.js"></script>
+</head>
+
+<body class="edt-background">
+    <div class="inc:site/header.html"></div>
+    <div class="uk-grid" data-uk-grid-margin>
+        <div class="uk-width-medium-1-1">
+            <div class="edt-front2"></div>
+        </div>
+    </div>    
+    <div class="edt-middle">
+        <div class="uk-container uk-container-center">
+            <div class="uk-grid" data-uk-grid-margin>
+                <div class="edt-sidebar uk-width-medium-1-4 uk-hidden-small">
+                    <ul class="edt-nav uk-nav" data-uk-nav>
+                        <li class="uk-nav-header">Conceptual</li>
+                        <li><a href="readme.html">Dance Floor</a></li>
+                        <li><a href="source.html">First Steps</a></li>
+                        <li><a href="tools.html">Do the Hustle</a></li>
+                        <li class="uk-active"><a href="bower.html">Disco Duck</a></li>
+                        <li><a href="tasks.html">Disco Pig</a></li>
+                        <li class="uk-nav-header"></li>
+                        <li><a href=""></a></li>
+                    </ul>
+                    <img class="uk-border-circle" src="images/discoduck.png" width="50%"/>
+                    <ul class="edt-nav uk-nav" data-uk-nav style="margin-top:32px;">
+                        <li class="uk-nav-header">Have a look at:</li>
+                        <li><a href="../package.json">package.json</a></li>
+                        <li><a href="../bower.json">bower.json</a></li>
+                        <li><a href="../Gruntfile.js">Gruntfile.js</a></li>
+                        <li class="uk-nav-header"></li>
+                        <li><a href=""></a></li>
+                    </ul>                    
+                </div>
+                <div class="edt-main uk-width-medium-3-4">
+                    <article class="uk-article">
+                        <h2 id="automate"><a href="#automate" class="uk-link-reset">Using Bower</a></h2>
+                        <hr class="uk-article-divider">
+                        <div class="uk-grid">
+                            <div class="uk-width-medium-1-2">                                   
+                                <p>
+                                    If you are like me then you have been reading this document and actively  
+                                    following along by copying content from your browser and pasting it to your
+                                    shell. So now that we have bower installed, I wonder if there is a modern 
+                                    approach to copying text to/from your clipboard. Let&apos;s use bower to check:
+                                </p>
+                            </div>
+                            <div class="uk-width-medium-1-4">
+                                <div class="uk-container uk-container-center uk-text-center">
+                                    <a href="http://bower.io"><img src="images/bower.png" width="100px"></a><br/>
+                                    <a href="http://bower.io">bower.io</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uk-grid">
+                            <div class="uk-width-medium-3-4">                                   
+                                <p></p>
+                                <button class="edt-clip" data-clipboard-text="bower search clipboard"><i class="uk-icon-clipboard"></i></button>
+                                <pre class="edt-border uk-margin-large-bottom">$ bower search clipboard
+Search results:
+
+    zeroclipboard git://github.com/zeroclipboard/zeroclipboard.git
+    angular-zeroclipboard git://github.com/lisposter/angular-zeroclipboard.git
+    jquery-zeroclipboard git://github.com/balsamiq/jquery-zeroclipboard.git
+    ez-zero-clipboard git://github.com/jdewit/ez-zero-clipboard.git
+    cp-clipboard git://github.com/jon301/cp-clipboard.git
+    image-clipboard git://github.com/jorgenbs/ImageClipboard.git
+    angular-clipboard git://github.com/omichelsen/angular-clipboard.git
+    clipboard.js git://github.com/lgarron/clipboard.js.git
+    clipboard-button git://github.com/omichelsen/clipboard-button.git
+    react-copy-to-clipboard git://github.com/bower-registry/react-copy-to-clipboard.git
+    ngclipboard git://github.com/sachinchoolur/ngclipboard.git
+    purescript-zclipboard git://github.com/slamdata/purescript-zclipboard.git
+    zeroclipboard-qbt https://gitcafe.com/QiaoButang/zeroclipboard-qbt.git
+    jr-clipboard git://github.com/janresiak/jr-clipboard.git
+    clipboard git://github.com/zenorocha/clipboard.js.git</pre>
+    
+                                <p>
+                                    Apparently there are quite a few projects related to the clipboard. Lets 
+                                    examine one.
+                                </p>
+                                <button class="edt-clip" data-clipboard-text="bower info clipboard"><i class="uk-icon-clipboard"></i></button>
+                                <pre class="edt-border uk-margin-large-bottom">$ bower info clipboard
+bower cached        git://github.com/zenorocha/clipboard.js.git#1.5.5
+bower validate      1.5.5 against git://github.com/zenorocha/clipboard.js.git#*
+
+{
+  name: 'clipboard',
+  version: '1.5.5',
+  description: 'Modern copy to clipboard. No Flash. Just 2kb',
+  license: 'MIT',
+  &vellip;
+  homepage: '<a href="http://clipboardjs.com/">https://github.com/zenorocha/clipboard.js</a>'
+  &vellip;
+}
+
+Available versions:
+  - 1.5.5
+  - 1.5.4
+  &vellip;  
+  - 1.0.0
+You can request info for a specific version with 'bower info clipboard#<version>'</pre>
+
+                    <p class="uk-margin-large-top">Ok it&apos;s got a MIT license - so let&apos;s go to out dev directory and
+                        grab a copy&hellip;</p>
+                                                
+                    <button class="edt-clip" data-clipboard-text="bower install clipboard"><i class="uk-icon-clipboard"></i></button>                                                
+                    <pre class="edt-border uk-margin-large-bottom">$ cd dev
+                        
+$ bower install clipboard
+bower cached        git://github.com/zenorocha/clipboard.js.git#1.5.5
+bower validate      1.5.5 against git://github.com/zenorocha/clipboard.js.git#*
+bower install       clipboard#1.5.5
+
+clipboard#1.5.5 bower_components/clipboard</pre>
+  
+                    <p class="uk-margin-large-top">
+                        Once "installed", clipboard is located in the <b>dev/bower_components/clipboard</b>
+                        directory. You can then look at the source, read the doc and generally decide whether or not 
+                        this solves your problem. Incidentally I did not know anything about the clipboard 
+                        component before I started writing this document but I now have added its functionality 
+                        to the system (even in this document). To accept this component into <span class="edt-tla2">EDT</span>
+                        you simply use bower to update the development dependencies stored in the bower.json 
+                        file. This file is the equivalent to package.json for a node or grunt component.
+                    <p>
+                    <button class="edt-clip" data-clipboard-text="bower install clipboard --save-dev"><i class="uk-icon-clipboard"></i></button>
+                    <pre class="edt-border uk-margin-large-bottom">$ bower install clipboard --save-dev
+bower cached        git://github.com/zenorocha/clipboard.js.git#1.5.5
+bower validate      1.5.5 against git://github.com/zenorocha/clipboard.js.git#*
+</pre>
+
+                    <p class="uk-margin-large-top">Bower reads the bower.json located in the dev directory
+                        and uses it to manage source level components and their dependencies. To grab the sources 
+                        referenced by this bower.json, issue the install command:
+                    </p>
+                    
+                    <button class="edt-clip" data-clipboard-text="bower install"><i class="uk-icon-clipboard"></i></button>                        
+                    <pre class="edt-border uk-margin-large-bottom">$ bower install</pre>
+                    
+                    <h3>Lets get it on!</h3>
+
+                            </div>      
+                            <div class="uk-width-medium-1-4">
+                            </div>
+                        </div>
+                        <hr class="uk-article-divider">
+                        <iframe class="edt-shadow uk-border-rounded" style="opacity:0.8;" width="520" height="315" src="https://www.youtube.com/embed/gAL4CmpH0Mc" frameborder="1" allowfullscreen></iframe>
+ 
+                      </div>                            
+                                                        
+                            
+                        </div>
+                    </article>
+                </div>
+
+                <div class="uk-width-medium-1-4">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="inc:site/footer.html"></div>
+</body>
+<script>new Clipboard('.edt-clip');</script>
+</html>

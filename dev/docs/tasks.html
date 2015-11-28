@@ -32,13 +32,14 @@
                         <li><a href="readme.html">Dance Floor</a></li>
                         <li><a href="source.html">First Steps</a></li>
                         <li><a href="tools.html">Do the Hustle</a></li>
+                        <li><a href="bower.html">Disco Duck</a></li>
                         <li class="uk-active"><a href="tasks.html">Disco Pig</a></li>
                         <li class="uk-nav-header"></li>
                         <li><a href=""></a></li>
                     </ul>
                     <img class="uk-border-circle" src="images/discopig.png" width="50%"/>
                     <ul class="edt-nav uk-nav" data-uk-nav style="margin-top:94px;">
-                        <li class="uk-nav-header">Have a look at:</li>
+                        <li class="uk-nav-header">Have a look at</li>
                         <li><a href="../package.json">package.json</a></li>
                         <li><a href="../bower.json">bower.json</a></li>
                         <li><a href="../Gruntfile.js">Gruntfile.js</a></li>
@@ -72,7 +73,8 @@
                             </div>
                             <div class="uk-width-medium-1-4">
                                 <div class="uk-container uk-container-center uk-text-center">
-                                    <a href="https://www.youtube.com/watch?v=DJuXy1MPOco"><img class="uk-border-rounded" src="images/auto2.png" width="240px" height="315px" alt="disco robot"></a>
+                                    <a href="https://www.youtube.com/watch?v=DJuXy1MPOco"><img class="edt-shadow uk-border-rounded" src="images/auto2.png" width="240px" height="315px" alt="disco robot"></a>
+                                    <br/><br/>
                                     <a href="https://www.youtube.com/watch?v=DJuXy1MPOco">disco robot</a>
                                 </div>
                             </div>
@@ -92,7 +94,7 @@
                                     
                                     Since <span class="edt-tla2">EDT</span> is already setup to use grunt all you need to do is
                                     is issue the npm install command. npm finds grunt as a dependency (by looking in the 
-                                    package.json file) and installs it.
+                                    package.json file) and installing its dependencies.
                                 </p>                                
                                     
                             </div>
@@ -106,11 +108,6 @@
 
                         <div class="uk-grid">
                             <div class="uk-width-3-4">                                
-                                <p>
-                                    Install the command line interface (npm install -g grunt-cli) and then use 
-                                    bower to grab/update source dependencies (listed in bower.json). And finally you are ready 
-                                    to start grunting.
-                                </p>
                                 <pre class="edt-border uk-margin-large-bottom">C:\Users\codemarc>cd ElectricDiscoTech\dev
 <button class="edt-clip" data-clipboard-text="npm install"><i class="uk-icon-clipboard"></i></button>
 C:\Users\codemarc\ElectricDiscoTech\dev>npm install
@@ -122,8 +119,15 @@ ElectricDiscoTech@0.0.1 C:\Users\codemarc\ElectricDiscoTech\dev
 
   ├── underscore.string@2.2.1
   └── which@1.0.9
+</pre>
+                                <p>Since grunt is run as a node application, you can start grunt from 
+                                    a command line as you would start any node application. Install the 
+                                    command line interface globally: npm install -g grunt-cli
+                                </p>
                  
+                                 
 <button class="edt-clip" data-clipboard-text="npm install -g grunt-cli"><i class="uk-icon-clipboard"></i></button>
+<pre class="edt-border uk-margin-large-bottom">
 C:\Users\codemarc\ElectricDiscoTech\dev>npm install -g grunt-cli
 npm WARN deprecated lodash@2.4.2: lodash@<3.0.0 is no longer maintained. Upgrade
  to lodash@^3.0.0.
@@ -141,9 +145,15 @@ C:\Users\codemarc\AppData\Roaming\npm
   ├─┬ nopt@1.0.10
   │ └── abbrev@1.0.7
   └── resolve@0.3.1
+</pre>
+                                <p>
+                                    Install the command line interface (npm install -g grunt-cli) and then use 
+                                    bower to grab/update source dependencies (listed in bower.json). And finally you are ready 
+                                    to start grunting.
+                                </p>
   
 <button class="edt-clip" data-clipboard-text="bower install"><i class="uk-icon-clipboard"></i></button>  
-C:\Users\codemarc\ElectricDiscoTech\dev>bower install
+<pre class="edt-border uk-margin-large-bottom">C:\Users\codemarc\ElectricDiscoTech\dev>bower install
 ? May bower anonymously report usage statistics to improve the tool over time? (
 Y/n) n
 ? May bower anonymously report usage statistics to improve the tool over time? N
@@ -173,9 +183,13 @@ uikit#2.23.0 bower_components\uikit
 └── jquery#2.1.4
 
 jquery#2.1.4 bower_components\jquery
+</pre>
+                                <p>
+                                    <b>And finally you are ready to start grunting.</b>
+                                </p>
 
 <button class="edt-clip" data-clipboard-text="grunt"><i class="uk-icon-clipboard"></i></button>
-C:\Users\codemarc\ElectricDiscoTech\dev>grunt
+<pre class="edt-border uk-margin-large-bottom">C:\Users\codemarc\ElectricDiscoTech\dev>grunt
 Running "less:development" (less) task
 >> 2 stylesheets created.
 
