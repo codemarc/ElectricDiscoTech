@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="An approach to developing modern web applications">
+    <meta name="author" content="Marc J. Greenberg">
+    <title>ElectricDiscoTech</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.min.css" type="text/css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/uikit.min.js"></script>
+    <script src="js/clipboard.min.js"></script>
+    <script src="js/edt.min.js"></script>
+</head>
+
+<body class="edt-background">
+    <div class="inc:site/header.html"></div>
+    <div class="uk-grid" data-uk-grid-margin>
+        <div class="uk-width-medium-1-1">
+            <div class="edt-front2"></div>
+        </div>
+    </div>
+    <div class="edt-middle">
+        <div class="uk-container uk-container-center">
+            <div class="uk-grid" data-uk-grid-margin>
+                <div class="edt-sidebar uk-width-medium-1-4 uk-hidden-small">
+                    <ul class="edt-nav uk-nav" data-uk-nav>
+                        <li class="uk-nav-header">Conceptual</li>
+                        <li><a href="readme.html">Dance Floor</a></li>
+                        <li><a href="source.html">First Steps</a></li>
+                        <li><a href="tools.html">Do the Hustle</a></li>
+                            <ul class="uk-nav uk-margin-left">
+                                <li><a href="winivp.html"><i class="uk-icon-windows uk-margin-right"></i>Windows (ivp)</a></li>
+                                <li class="uk-active"><a href="linuxivp.html"><i class="uk-icon-linux uk-margin-right"></i>Linux (ivp)</a></li>
+                                <li><a href="osxivp.html"><i class="uk-icon-apple uk-margin-right"></i>Mac OS X (ivp)</a></li>
+                            </ul>
+                        <li><a href="bower.html">Disco Duck</a></li>                            
+                        <li><a href="tasks.html">Disco Pig</a></li>                            
+                        <li class="uk-nav-header"></li>
+                        <li><a href=""></a></li>
+                    </ul>
+                </div>
+                <div class="edt-main uk-width-medium-3-4">
+                    <article class="uk-article">
+                        <h2 id="linuxivp">
+                            <img src="images/ubuntu.png" width="48"/>
+                            <a href="#linuxivp" class="uk-link-reset">&nbsp;&nbsp;Linux ivp for <i class="edt-tla2">EDT</i></a>
+                        </h2>
+                        <hr class="uk-article-divider">
+                        <div class="uk-grid"> 
+                            <div class="uk-width-medium-1-2">
+                                <p>
+                                    Yes I know that there are other linux distributions around but
+                                    I am a big fan of debian in general and ubuntu in particular. These
+                                    instruction are run against a Amazon EC2 t2.micro instance running
+                                    ubuntu 14.04 trusty server.                                     
+                                </p>
+                                <div class="edt-shadow uk-cover">
+                                    <a href="images/aws54.png"><img style="border: 1px solid #000000;" src="images/aws54.png"></a>
+                                </div>
+                            </div>
+                            <div class="uk-width-medium-1-4">
+                                <a href="images/aws1.png"><img style="border: 1px solid #000000;" src="images/aws1.png"></a>
+                                <div class="uk-container uk-container-center uk-text-center uk-text-small uk-margin-large-bottom">
+                                    <a href="https://console.aws.amazon.com/console/home?region=us-east-1">amazon web services</a>
+                                </div>
+                                
+                                <a href="images/aws2.png"><img style="border: 1px solid #000000;" src="images/aws2.png"  width="100%"></a>
+                                <div class="uk-container uk-container-center uk-text-center uk-text-small">
+                                    <a href="https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Instances:sort=dnsName">console.aws.amazon.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="uk-width-medium-1-4">
+                </div>
+            </div>
+            
+            <!-- Git -->                
+            <div class="uk-grid">
+                <div class="uk-width-medium-1-4">
+                    <a href="https://github.com/explore">
+                        <img style="margin-top:2.5em;margin-left:-18px;" src="images/github-octocat.png">
+                    </a>
+                     
+                </div> 
+                <div class="uk-width-medium-3-4">
+                    <hr class="uk-article-divider" style="margin-top:-48px;">
+                    <h4><a href="https://github.com">Git</a></h4>
+                    <p>
+                        If you are a linux user then you must already know a little bit about shells, ssh and 
+                        how to use the command line. If not you probably want to use a different platform as your
+                        dance floor.
+                    </p>
+                    
+                    <p>Let&apos;s start a shell and validate the ability to run git from the command prompt:</p>
+                    <pre class="edt-border uk-margin-large-bottom">$ git
+The program 'git' is currently not installed. You can install it by typing:
+sudo apt-get install git</pre>
+
+                    <p>So I guess it not there. Let&apos;s do what it says and install git.</p>
+                    <button class="edt-clip" data-clipboard-text="sudo apt-get install -y git"><i class="uk-icon-clipboard"></i></button>
+                    <pre class="edt-border uk-margin-large-bottom">$ sudo apt-get install -y git
+sudo: unable to resolve host ip-172-30-0-110
+Reading package lists... Done
+Building dependency tree       
+&vellip;
+0 upgraded, 3 newly installed, 0 to remove and 0 not upgraded.
+Need to get 3,346 kB of archives.
+After this operation, 21.6 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+&vellip;
+Setting up git (1:1.9.1-1ubuntu0.1) ...
+
+$ git --version
+git version 1.9.1</pre>
+
+
+                    <p>So we got some git. Let&apos;s get <span class="edt-tla2">EDT</span>.</p>
+
+                    <button class="edt-clip" data-clipboard-text="git clone https://github.com/codemarc/ElectricDiscoTech"><i class="uk-icon-clipboard"></i></button>
+                    <pre class="edt-border">$ git clone https://github.com/codemarc/ElectricDiscoTech
+Cloning into 'ElectricDiscoTech'...
+remote: Counting objects: 241, done.
+remote: Compressing objects: 100% (17/17), done.
+remote: Total 241 (delta 3), reused 0 (delta 0), pack-reused 223
+Receiving objects: 100% (241/241), 4.34 MiB | 0 bytes/s, done.
+Resolving deltas: 100% (94/94), done.
+Checking connectivity... done.</pre>
+                </div>
+            </div>        
+        
+            <!-- NODE/NPM -->
+            <div class="uk-grid">
+                <div class="uk-width-medium-1-4">
+                    <a href="https://nodejs.org/">
+                        <img style="margin-top:3.5em" src="images/nodejs-npm.png" width="70%">
+                    </a>
+                </div> 
+                <div class="uk-width-medium-3-4">
+                    <hr class="uk-article-divider">
+                    <h4><a href="https://www.npmjs.com/">Npm</a></h4>
+                    <p>Now let&apos;s see which version of npm is installed:</p>
+                    <button class="edt-clip" data-clipboard-text="npm -v"><i class="uk-icon-clipboard"></i></button>
+                    <pre>$ npm -v
+The program 'npm' is currently not installed. You can install it by typing:
+sudo apt-get install npm</pre>
+                        
+                    <p>
+                        This error message is a little misleading. The real problem is that I forgot to install  <a href="https://nodejs.org">Node.js</a>
+                        which includes <a href="https://www.npmjs.com/">npm</a>. There are a variety of ways to get Node.js working on linux.
+                        I like to use a package manager, for ubuntu:
+                    </p>
+                
+                    <button class="edt-clip" data-clipboard-text="curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -"><i class="uk-icon-clipboard"></i></button>                
+                    <pre>$ curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+## Installing the NodeSource Node.js 4.x LTS Argon repo...
+## Populating apt-get cache...
++ apt-get update
+&vellip;
+## Confirming "trusty" is supported...
+## Adding the NodeSource signing key to your keyring...
+## Creating apt sources list file for the NodeSource Node.js 4.x LTS Argon repo...
+## Running `apt-get update` for you...
+&vellip;
+Fetched 6,624 B in 3s (2,200 B/s)
+Reading package lists... Done
+
+## Run `apt-get install nodejs` (as root) to install Node.js 4.x LTS Argon and npm
+</pre>
+<button class="edt-clip" data-clipboard-text="sudo apt-get install -y nodejs"><i class="uk-icon-clipboard"></i></button>
+<pre class="edt-border uk-margin-large-bottom">
+$ sudo apt-get install -y nodejs
+get install -y nodejs
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Doneq
+The following extra packages will be installed:
+  libicu52 rlwrap
+The following NEW packages will be installed:
+  libicu52 nodejs rlwrap
+0 upgraded, 3 newly installed, 0 to remove and 70 not upgraded.
+Need to get 13.6 MB of archives.
+After this operation, 61.6 MB of additional disk space will be used.
+&vellip;
+update-alternatives: using /usr/bin/rlwrap to provide /usr/bin/readline-editor (readline-editor) in auto mode
+Setting up nodejs (4.2.2-2nodesource1~trusty1) ...
+Processing triggers for libc-bin (2.19-0ubuntu6.6) ...
+
+</pre>
+                    <p>
+                        So assuming everything went right we should be able to test npm
+                    </p>
+                    <button class="edt-clip" data-clipboard-text="npm -v"><i class="uk-icon-clipboard"></i></button>                
+                    <pre class="edt-border uk-margin-large-bottom">$ npm -v
+2.14.7</pre>
+                    <p> 
+                        You can update npm using npm.
+                    </p>
+                    <button class="edt-clip" data-clipboard-text="sudo npm install -g npm"><i class="uk-icon-clipboard"></i></button>
+                    <pre class="edt-border uk-margin-large-bottom">$ sudo npm install -g npm
+/usr/bin/npm -> /usr/lib/node_modules/npm/bin/npm-cli.js
+npm@3.5.0 /usr/lib/node_modules/npm
+
+$ npm -v
+3.5.0</pre> 
+                </div>
+            </div>        
+
+            <!-- BOWER -->
+            <div class="uk-grid">
+                <div class="uk-width-medium-1-4">
+                    <a href="http://bower.io/">
+                        <img class="uk-margin-left" src="images/bower.png" width="45%">
+                    </a>
+                </div>
+                <div class="uk-width-medium-2-4">
+                    <hr class="uk-article-divider" style="margin-top:-36px;">
+                    <h4><a href="http://bower.io/">Bower</a></h4>
+
+                    <p><a href="http://bower.io/">bower</a> is billed as a package manager for the web. What it saves you from is endless hours
+                        of searching for source components. If you know the name of a component and its author has created a package for it (most
+                        popular components have the by now) then all you need to do to grab a copy using: 
+                        <span class="uk-margin-left uk-text-primary">bower install 
+                        &lt;package&gt;</span>
+                    </p>
+                    
+                    <p>To install or update bower run:</p>
+                    
+                    <button class="edt-clip" data-clipboard-text="sudo npm install -g bower"><i class="uk-icon-clipboard"></i></button>
+                    <pre>$ sudo npm install -g bower
+&vellip;
+$ bower -version
+1.6.8                      
+</pre>
+                    
+                </div>
+            </div>
+        
+    </div>
+    <div class="inc:site/footer.html"></div>    
+</body>
+<script>new Clipboard('.edt-clip');</script>
+</html>
