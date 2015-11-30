@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="An approach to developing modern web applications">
+    <meta name="author" content="Marc J. Greenberg">
+    <title>ElectricDiscoTech</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.min.css" type="text/css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/uikit.min.js"></script>
+    <script src="js/clipboard.min.js"></script>
+    <script src="js/edt.min.js"></script>
+</head>
+
+<body class="edt-background">
+    <div class="inc:site/header.html"></div>
+    <div class="uk-grid" data-uk-grid-margin>
+        <div class="uk-width-medium-1-1">
+            <div class="edt-front2"></div>
+        </div>
+    </div>
+    <div class="edt-middle">
+        <div class="uk-container uk-container-center">
+            <div class="uk-grid" data-uk-grid-margin>
+                <div class="edt-sidebar uk-width-medium-1-4 uk-hidden-small">
+                    <ul class="edt-nav uk-nav" data-uk-nav>
+                        <li class="uk-nav-header">Conceptual</li>
+                        <li><a href="readme.html">Dance Floor</a></li>
+                        <li><a href="source.html">First Steps</a></li>
+                        <li><a href="tools.html">Do the Hustle</a></li>
+                            <ul class="uk-nav uk-margin-left">
+                                <li><a href="winivp.html"><i class="uk-icon-windows uk-margin-right"></i>Windows (ivp)</a></li>
+                                <li><a href="linuxivp.html"><i class="uk-icon-linux uk-margin-right"></i>Linux (ivp)</a></li>
+                                <li class="uk-active"><a href="osxivp.html"><i class="uk-icon-apple uk-margin-right"></i>Mac OS X (ivp)</a></li>
+                            </ul>
+                        <li><a href="bower.html">Disco Duck</a></li>                            
+                        <li><a href="tasks.html">Disco Pig</a></li>                            
+                        <li class="uk-nav-header"></li>
+                        <li><a href=""></a></li>
+                    </ul>
+                </div>
+                <div class="edt-main uk-width-medium-3-4">
+                    <article class="uk-article">
+                        <h2 id="osxivp">
+                            <img src="images/osx.png" width="48"/>
+                            <a href="#osxivp" class="uk-link-reset">&nbsp;&nbsp;Mac OS X ivp for <i class="edt-tla2">EDT</i></a>
+                        </h2>
+                        <hr class="uk-article-divider">
+                        <div class="uk-grid"> 
+                            <div class="uk-width-medium-1-2">
+                                <p>
+                                    <a href="http://www.apple.com/osx/">Mac OS X</a> is currently my favorite dance partner.                                    
+                                    It is a common practice among dance instructors, to have the students
+                                    switch partners frequently during the class in order to get them used to
+                                    dancing with different partners. Using OS X as a base platform I can seemlessly  
+                                    run virtualized windows and/or linux on demand. 
+                                </p>    
+                                <p>
+                                    While I mentioned this before, a good code editor is the hammer in a modern web application developers toolbox. 
+                                    For this project I am using one of Microsoft&apos;s latest concoctions, <a href=https://code.visualstudio.com/>
+                                    Visual Studio Code</a>. It runs on windows, linux and os x. It&apos;s open source and 
+                                    <a href="https://github.com/Microsoft/vscode">forkable on github</a> and I really like. 
+                                </p>                                                                                                   
+                            </div>
+                            <div class="uk-width-medium-1-4">
+                                <img src="images/discothink.png" width="80%"></a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="uk-width-medium-1-4">
+                </div>
+            </div>
+            
+                
+            <!-- Git -->                
+            <div class="uk-grid">
+                <div class="uk-width-medium-1-4">
+                    <a href="https://github.com/explore">
+                        <img style="margin-top:2.5em;margin-left:-18px;" src="images/github-octocat.png">
+                    </a>
+                     
+                </div> 
+                <div class="uk-width-medium-2-4">
+                    <hr class="uk-article-divider" style="margin-top:-48px;">
+                    <h4><a href="http://git-scm.com/">Git</a></h4>
+                    
+                    <!--//http://git-scm.com/-->
+                    <p>Let&apos;s start a shell and validate the ability to run git from the command prompt:</p>
+                    <button class="edt-clip" data-clipboard-text="git --version"><i class="uk-icon-clipboard"></i></button>
+                    <pre class="edt-border uk-margin-bottom">$ git --version
+git version 2.4.9 (Apple Git-60)
+</pre>
+                    <p>
+                        If for some reason you don&apos;t have git installed, you can download the 
+                        <a href="http://git-scm.com/download/mac">git-osx-installer</a>
+                        from <a href="http://git-scm.com/">get-scm.com</a> If you can use use git then 
+                        clone a copy of <span class="edt-tla2">EDT</span>:
+                    </p>
+                    <button class="edt-clip" data-clipboard-text="git clone https://github.com/codemarc/ElectricDiscoTech"><i class="uk-icon-clipboard"></i></button>
+                    <pre class="edt-border">$ git clone https://github.com/codemarc/ElectricDiscoTech
+Cloning into 'ElectricDiscoTech'...
+remote: Counting objects: 254, done.
+remote: Compressing objects: 100% (30/30), done.
+remote: Total 254 (delta 10), reused 0 (delta 0), pack-reused 223
+Receiving objects: 100% (254/254), 5.69 MiB | 3.31 MiB/s, done.
+Resolving deltas: 100% (101/101), done.
+Checking connectivity... done.
+</pre>
+                </div>
+            </div>
+        
+        
+            <!-- NODE/NPM -->
+            <div class="uk-grid">
+                <div class="uk-width-medium-1-4">
+                    <a href="https://nodejs.org/">
+                        <img style="margin-top:3.5em" src="images/nodejs-npm.png" width="70%">
+                    </a>      
+                </div> 
+                <div class="uk-width-medium-2-4">
+                    <hr class="uk-article-divider">
+                    <h4><a href="https://www.npmjs.com/">Npm</a></h4>
+                    <p>Now let&apos;s see which version of npm is installed:</p>
+                    <button class="edt-clip" data-clipboard-text="npm -v"><i class="uk-icon-clipboard"></i></button>
+                    <pre>$ npm -v
+-bash: npm: command not found                        
+</pre>
+                    <p>
+                        Oops, fogot to install node. <a href="https://www.npmjs.com/">npm</a> is part of <a href="https://nodejs.org">Node.js</a>. 
+                        On the Node.js website you can quickly find the download for installable package for OS X (x64).
+                    </p>
+                
+                    <button class="edt-clip" data-clipboard-text="npm -v"><i class="uk-icon-clipboard"></i></button>                
+                    <pre class="edt-border">$ npm -v
+2.14.7
+</pre>
+                    <p>
+                        You can use npm to update npm.
+                    </p>
+                    <button class="edt-clip" data-clipboard-text="sudo npm install -g npm"><i class="uk-icon-clipboard"></i></button>
+                    <pre class="edt-border uk-margin-large-bottom">$ sudo npm install -g npm
+&vellip;
+$ npm -v
+3.5.0
+</pre>      
+                </div>
+            </div>        
+
+            <!-- BOWER -->
+            <div class="uk-grid">
+                <div class="uk-width-medium-1-4">
+                    <a href="http://bower.io/">
+                        <img class="uk-margin-left" src="images/bower.png" width="45%">
+                    </a>
+                </div>
+                <div class="uk-width-medium-2-4">
+                    <hr class="uk-article-divider" style="margin-top:-36px;">
+                    <h4><a href="http://bower.io/">Bower</a></h4>
+
+                    <p><a href="http://bower.io/">bower</a> is billed as a package manager for the web. What it saves you from is endless hours
+                        of searching for source components. If you know the name of a component and its author has created a package for it (most
+                        popular components have the by now) then all you need to do to grab a copy using: 
+                        <span class="uk-margin-left uk-text-primary">bower install 
+                        &lt;package&gt;</span>
+                    </p>
+                    
+                    <p>To install or update bower run:</p>
+                    
+                    <button class="edt-clip" data-clipboard-text="npm install -g bower"><i class="uk-icon-clipboard"></i></button>
+                    <pre>$ npm install -g bower
+&vellip;
+$ bower -version
+1.6.5                        
+</pre>
+                    
+                </div>
+            </div>
+        
+    </div>
+    <div class="inc:site/footer.html"></div>    
+</body>
+<script>new Clipboard('.edt-clip');</script>
+</html>
